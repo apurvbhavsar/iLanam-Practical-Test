@@ -17,8 +17,10 @@ class DatabaseSeeder extends Seeder
     {
 
         $user = \App\Models\User::create([
-            'name' => 'Admin User',
+            'firstname' => 'Admin',
+            'lastname' => 'User',
             'email' => 'admin@iLam.com',
+            'phone' => '1234567890',
             'password' => Hash::make('admin123')
         ]);
         $user->assignRole('Admin');
